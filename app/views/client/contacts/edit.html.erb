@@ -1,0 +1,20 @@
+Use this page to edit an existing contact.
+<%= form_tag "/client/contacts/#{params['id']}", method: :patch do %>
+  <div>
+    First Name: <input type="text" name="input_first_name" value="<%= @contact['first_name'] %>">
+  </div>
+  <div>
+    Last Name: <input type="text" name="input_last_name" value="<%= @contact['last_name'] %>">
+  </div>
+  <div>
+    Email: <input type="text" name="input_email" value="<%= @contact['email'] %>">
+  </div>
+  <div>
+    Phone Number: <input type="text" name="input_phone_number" value="<%= @contact['phone_number'] %>">
+  </div>
+  <input type="submit" name="Submit Changes">
+<% end %>
+
+<%= form_tag "/client/contacts/#{params['id']}", method: :delete do %>
+  <input type="submit" value="Remove this contact">
+<% end %>

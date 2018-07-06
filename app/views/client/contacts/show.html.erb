@@ -1,0 +1,9 @@
+<p>Contact ID: <%= @contact['id'] %></p>
+<p>First Name: <%= @contact['first_name'] %></p>
+<p>Last Name: <%= @contact['last_name'] %></p>
+<p>Email: <%= @contact['email'] %></p>
+<p>Phone Number: <%= @contact['phone_number'] %></p>
+<p>Created At: <%= @contact['created_at'] %></p>
+<p>Updated At: <%= @contact['updated_at'] %></p>
+
+<a href="/client/contacts/<%= @contact['id'] %>/edit">Click here to edit this contact</a>
