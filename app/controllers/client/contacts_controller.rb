@@ -19,7 +19,7 @@ class Client::ContactsController < ApplicationController
       }
     )
     @contact = response.body
-    render "show.html.erb"
+    redirect_to "/client/contacts/#{@contact['id']}"
   end
 
   def show
@@ -47,12 +47,12 @@ class Client::ContactsController < ApplicationController
       }
     )
     @contact = response.body
-    render "show.html.erb"
+    redirect_to "/client/contacts/#{@contact['id']}"
   end
 
   def destroy
     contact_id = params[:id]
     response = Unirest.delete("localhost:3000/api/contacts/#{contact_id}")
-    render "destroy.html.erb"
+    redirect_to "/client/contacts"
   end
 end
