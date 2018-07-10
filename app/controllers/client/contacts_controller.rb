@@ -13,6 +13,7 @@ class Client::ContactsController < ApplicationController
     response = Unirest.post("localhost:3000/api/contacts", parameters: 
       {
         input_first_name: params[:input_first_name],
+        input_middle_name: params[:input_middle_name],
         input_last_name: params[:input_last_name],
         input_email: params[:input_email],
         input_phone_number: params[:input_phone_number]
@@ -41,6 +42,7 @@ class Client::ContactsController < ApplicationController
     response = Unirest.patch("localhost:3000/api/contacts/#{contact_id}", parameters: 
       {
         input_first_name: params['input_first_name'],
+        input_middle_name: params['input_middle_name'],
         input_last_name: params['input_last_name'],
         input_email: params['input_email'],
         input_phone_number: params['input_phone_number']
