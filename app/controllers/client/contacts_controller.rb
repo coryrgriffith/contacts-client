@@ -16,7 +16,8 @@ class Client::ContactsController < ApplicationController
         input_middle_name: params[:input_middle_name],
         input_last_name: params[:input_last_name],
         input_email: params[:input_email],
-        input_phone_number: params[:input_phone_number]
+        input_phone_number: params[:input_phone_number],
+        input_bio: params[:input_bio]
       }
     )
     @contact = response.body
@@ -45,7 +46,8 @@ class Client::ContactsController < ApplicationController
         input_middle_name: params['input_middle_name'],
         input_last_name: params['input_last_name'],
         input_email: params['input_email'],
-        input_phone_number: params['input_phone_number']
+        input_phone_number: params['input_phone_number'],
+        input_bio: params['input_bio']
       }
     )
     @contact = response.body
