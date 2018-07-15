@@ -1,13 +1,7 @@
 Rails.application.routes.draw do
   # STEP 1: A ROUTE triggers a controller action
   # verb "/urls" => "namespace/controllers#action"
-  # index
-  # new
-  # show
-  # create
-  # edit
-  # update
-  # destroy
+  get '/' => 'client/contacts#index'
   namespace :client do
     get '/contacts' => 'contacts#index'
     get '/contacts/new' => 'contacts#new'
@@ -16,5 +10,12 @@ Rails.application.routes.draw do
     get '/contacts/:id/edit' => 'contacts#edit'
     patch '/contacts/:id' => 'contacts#update'
     delete '/contacts/:id' => 'contacts#destroy'
+
+    get '/signup' => 'users#new'
+    post '/users' => 'users#create'
+
+    get '/login' => 'sessions#new'
+    post '/login' => 'sessions#create'
+    delete '/logout' => 'sessions#destroy'
   end
 end

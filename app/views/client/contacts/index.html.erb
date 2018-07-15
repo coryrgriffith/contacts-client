@@ -1,14 +1,15 @@
 <% @contacts.each do |contact| %>
-<p>Contact ID: <%= contact['id'] %></p>
-<p>First Name: <a href="/client/contacts/<%= contact['id'] %>"><%= contact['first_name'] %></a></p>
-<p>Middle Name: <%= contact['middle_name'] %></p>
-<p>Last Name: <%= contact['last_name'] %></p>
-<p>Full Name: <%= contact['formatted']['first_and_last_name'] %></p>
-<p>Email: <%= contact['email'] %></p>
-<p>Phone Number: <%= contact['phone_number'] %></p>
-<p>Japanese Phone Number: <%= contact['formatted']['japanese_phone_number'] %></p>
-<p>Bio: <%= contact['bio'] %></p>
-<p>Created At: <%= contact['created_at'] %></p>
-<p>Updated At: <%= contact['formatted']['updated_at'] %></p>
+  <p>Contact ID: <%= contact['id'] %></p>
+  <p>User ID: <%= contact['user_id'] %></p>
+  <p>First Name: <a href="/client/contacts/<%= contact['id'] %>"><%= contact['first_name'] %></a></p>
+  <p>Middle Name: <%= contact['middle_name'] %></p>
+  <p>Last Name: <%= contact['last_name'] %></p>
+  <p>Full Name: <%= contact['formatted']['first_and_last_name'] %></p>
+  <p>Email: <%= contact['email'] %></p>
+  <p>Phone Number: <%= contact['phone_number'] %></p>
+  <p>Japanese Phone Number: <%= contact['formatted']['japanese_phone_number'] %></p>
+  <p>Bio: <%= contact['bio'] %></p>
+  <p>Created At: <%= contact['created_at'] %></p>
+  <p>Updated At: <%= contact['formatted']['updated_at'] %></p>
 <hr>
 <% end %>

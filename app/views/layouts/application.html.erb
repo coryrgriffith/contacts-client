@@ -10,6 +10,13 @@
   </head>
 
   <body>
+    <a href="/client/signup">Sign Up</a>
+    <a href="/client/login">Log In</a>
+    <a href="/client/logout" data-method="delete">Log Out</a>
+    <%= @jwt %>
+    <% flash.each do |name, message| %>
+       <p><%= message %></p>
+     <% end %>
     <%= yield %>
     <a href="/client/contacts/new">Click here to create a new Contact</a><br>
     <a href="/client/contacts">Click here to return to the list of all contacts</a>
