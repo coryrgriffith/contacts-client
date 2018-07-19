@@ -8,6 +8,9 @@
 <p>Phone Number: <%= @contact['phone_number'] %></p>
 <p>Japanese Phone Number: <%= @contact['formatted']['japanese_phone_number'] %></p>
 <p>Bio: <%= @contact['bio'] %></p>
+<% @contact["groups"].each do |group| %>
+  <p><%= group['name'] %></p>
+<% end %>
 <p>Created At: <%= @contact['created_at'] %></p>
 <p>Updated At: <%= @contact['formatted']['updated_at'] %></p>
 
